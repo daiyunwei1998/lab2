@@ -4,24 +4,24 @@
 # Configuration only: these defaults are complete; 
 # no implementation is required.
 export MODEL_NAME="CompVis/stable-diffusion-v1-4"
-export DATASET_NAME="lambdalabs/naruto-blip-captions"
+export DATASET_NAME="Fung804/makoto-shinkai-picture"
 DATASET_CONFIG_NAME=""
-export OUTPUT_DIR="./runs/sd-naruto-model-lora"
-MIXED_PRECISION="no"
+export OUTPUT_DIR="./runs/sd-shinkai-lora"
+MIXED_PRECISION="fp16"
 IMAGE_COLUMN="image"
 CAPTION_COLUMN="text"
 RESOLUTION=512
 RANDOM_FLIP="true"
 TRAIN_BATCH_SIZE=1
 NUM_TRAIN_EPOCHS=100
-VALIDATION_EPOCHS=1
+VALIDATION_EPOCHS=5
 CHECKPOINTING_STEPS=2000
 LEARNING_RATE="1e-04"
 LR_SCHEDULER="constant"
 LR_WARMUP_STEPS=0
 SEED=42
 CHECKPOINTS_TOTAL_LIMIT=2
-VALIDATION_PROMPT="a cute bear"
+VALIDATION_PROMPT="a quiet city street at sunset with dramatic clouds"
 ######## END TODO: experiment configuration ########
 
 set -- \
