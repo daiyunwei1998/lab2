@@ -4,10 +4,10 @@
 # Configuration only: these defaults are complete; 
 # no implementation is required.
 export MODEL_NAME="CompVis/stable-diffusion-v1-4"
-export INSTANCE_DIR="./sample_data/dreambooth-cat"
-export OUTPUT_DIR="./runs/dreambooth_cat"
-INSTANCE_PROMPT="a photo of a sks cat"
-MIXED_PRECISION="no"
+export INSTANCE_DIR="./sample_data/catgirl_dreambooth"
+export OUTPUT_DIR="./runs/dreambooth_catgirl"
+INSTANCE_PROMPT="a photo of a sks catgirl"
+MIXED_PRECISION="fp16"
 RESOLUTION=512
 TRAIN_BATCH_SIZE=1
 GRADIENT_ACCUMULATION_STEPS=1
@@ -15,9 +15,9 @@ CHECKPOINTING_STEPS=100
 LEARNING_RATE="1e-4"
 LR_SCHEDULER="constant"
 LR_WARMUP_STEPS=0
-MAX_TRAIN_STEPS=500
-VALIDATION_PROMPT="A photo of sks cat in a bucket"
-VALIDATION_EPOCHS=50
+MAX_TRAIN_STEPS=1000
+VALIDATION_PROMPT="A photo of a sks catgirl standing on a city street at sunset"
+VALIDATION_EPOCHS=25
 CHECKPOINTS_TOTAL_LIMIT=2
 SEED=0
 ######## END TODO: experiment configuration ########
